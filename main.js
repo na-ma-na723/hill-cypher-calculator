@@ -3,8 +3,6 @@ const outputText1 = document.getElementById("outputText1");
 const outputText2 = document.getElementById("outputText2");
 const key = document.getElementById("key");
 
-// console.log(vigenereCppCode);
-
 const cppBtn = document.getElementById("cppButton");
 const pyBtn = document.getElementById("pyButton");
 const jsBtn = document.getElementById("jsButton");
@@ -29,7 +27,6 @@ function hillKeyMatrix(key, n) {
             temp.push( key.charCodeAt(ch) - 65 );
             ch++;
         }
-        // console.log(temp)
         res.push(temp);
     }
     
@@ -77,8 +74,6 @@ function hillEncrypt2(key, plain, n) {
 }
 
 function hillEncrypt1Call(msg ,keyIn) {
-    // let msg = document.getElementById("inputText").value;
-    // let keyIn = document.getElementById("key").value;
 
     msg = msg.toUpperCase();
     keyIn = keyIn.toUpperCase();
@@ -91,8 +86,6 @@ function hillEncrypt1Call(msg ,keyIn) {
     return cyphertext;
 }
 function hillEncrypt2Call(msg, keyIn) {
-    // let msg = document.getElementById("outWindow").value;
-    // let keyIn = document.getElementById("key").value;
 
     msg = msg.toUpperCase();
     keyIn = keyIn.toUpperCase();
@@ -105,25 +98,6 @@ function hillEncrypt2Call(msg, keyIn) {
     return cyphertext;
 }
 
-
-function vigenereEncryptCall(msg, keyIn) {
-    msg = msg.toLowerCase();
-    keyIn = keyIn.toLowerCase();
-
-    let cyphertext = vigenereEncrypt(msg, keyIn);
-
-    return cyphertext;
-}
-
-function vigenereDecryptCall(cypherIn, keyIn) {
-    cypherIn = cypherIn.toLowerCase();
-    keyIn = keyIn.toLowerCase();
-
-    let ori = vigenereDecrypt(cypherIn, keyIn);
-
-    return ori;
-}
-
 function encryptButtonCall() {
     outputText1.value = hillEncrypt1Call(inputText.value, key.value);
 }
@@ -133,8 +107,8 @@ function decryptButtonCall() {
 }
 
 
-document.querySelector("#encryptButton").addEventListener("click",encryptButtonCall)
-document.querySelector("#decryptButton").addEventListener("click",decryptButtonCall)
+document.querySelector("#encryptButton1").addEventListener("click",encryptButtonCall)
+document.querySelector("#encryptButton2").addEventListener("click",decryptButtonCall)
 
 hillActiveCode.innerText = hillCppCode;
 const copyText = document.getElementById("copyButton");
@@ -142,12 +116,7 @@ const copiedText = document.getElementById("activeCode");
 // const tempTextArea = document.createElement('textarea');
 
 copyText.addEventListener("click", ()=>{
-    // tempTextArea.textContent = copiedText;
-    // document.body.append(tempTextArea);
-    // tempTextArea.select();
-    // document.execCommand("copy");
     navigator.clipboard.writeText(copiedText.innerText);
-    // tempTextArea.remove();
     copyText.classList.add('copied');
 
     setTimeout(()=>{
@@ -164,26 +133,6 @@ cppBtn.addEventListener("click", ()=>{
         pyBtn.value = "notselected";
         jsBtn.value = "notselected";
 
-        // cppBtn.style.backgroundColor = "#272822";
-        // pyBtn.style.backgroundColor = "#131417";
-        // jsBtn.style.backgroundColor = "#131417";
-
-        // cppBtn.style.border = "2px solid white"
-        // pyBtn.style.border = "0";
-        // jsBtn.style.border = "0";
-
-        // cppBtn.style.borderBottom = "0";
-        // pyBtn.style.borderBottom = "2px solid white";
-        // jsBtn.style.borderBottom = "2px solid white";
-
-        // cppBtn.style.color = "white";
-        // pyBtn.style.color = "yellow";
-        // jsBtn.style.color = "yellow";
-        
-        // cppCode.style.opacity = "1" ;
-        // pyCode.style.opacity = "0" ;
-        // jsCode.style.opacity = "0" ;
-
         cppBtn.classList.add('selected');
         pyBtn.classList.add('notSelected');
         jsBtn.classList.add('notSelected');
@@ -194,9 +143,6 @@ cppBtn.addEventListener("click", ()=>{
 
         hillActiveCode.innerText = hillCppCode;
 
-        // cppCode.style.height = "100%";
-        // pyCode.style.height = "0";
-        // jsCode.style.height = "0";
     }
 
 })
@@ -209,22 +155,6 @@ pyBtn.addEventListener("click", ()=>{
         pyBtn.value = "selected";
         jsBtn.value = "notselected";
 
-        // cppBtn.style.backgroundColor = "#131417";
-        // pyBtn.style.backgroundColor = "#272822";
-        // jsBtn.style.backgroundColor = "#131417";
-
-        // cppBtn.style.border = "0"
-        // pyBtn.style.border = "2px solid white";
-        // jsBtn.style.border = "0";
-
-        // cppBtn.style.borderBottom = "2px solid white";
-        // pyBtn.style.borderBottom = "0";
-        // jsBtn.style.borderBottom = "2px solid white";
-
-        // cppBtn.style.color = "yellow";
-        // pyBtn.style.color = "white";
-        // jsBtn.style.color = "yellow";
-
         cppBtn.classList.add("notSelected");
         pyBtn.classList.add("selected");
         jsBtn.classList.add("notSelected");
@@ -234,14 +164,6 @@ pyBtn.addEventListener("click", ()=>{
         jsBtn.classList.remove("selected");
         
         hillActiveCode.innerText = hillPyCode;
-
-        // cppCode.style.opacity = "0" ;
-        // pyCode.style.opacity = "1" ;
-        // jsCode.style.opacity = "0" ;
-
-        // cppCode.style.height = "0";
-        // pyCode.style.height = "100%";
-        // jsCode.style.height = "0";
 
     }
 
@@ -255,22 +177,6 @@ jsBtn.addEventListener("click", ()=>{
         pyBtn.value = "notselected";
         jsBtn.value = "selected";
 
-        // cppBtn.style.backgroundColor = "#131417";
-        // pyBtn.style.backgroundColor = "#131417";
-        // jsBtn.style.backgroundColor = "#272822";
-
-        // cppBtn.style.border = "0"
-        // pyBtn.style.border = "0";
-        // jsBtn.style.border = "2px solid white";
-
-        // cppBtn.style.borderBottom = "2px solid white";
-        // pyBtn.style.borderBottom = "2px solid white";
-        // jsBtn.style.borderBottom = "0";
-
-        // cppBtn.style.color = "yellow";
-        // pyBtn.style.color = "yellow";
-        // jsBtn.style.color = "white";
-
         cppBtn.classList.add("notSelected");
         pyBtn.classList.add("notSelected");
         jsBtn.classList.add("selected");
@@ -280,24 +186,5 @@ jsBtn.addEventListener("click", ()=>{
         jsBtn.classList.remove("notSelected");
 
         hillActiveCode.innerText = hillJsCode;
-
-        // cppCode.style.opacity = "0" ;
-        // pyCode.style.opacity = "0" ;
-        // jsCode.style.opacity = "1" ;
-
-        // cppCode.style.height = "0";
-        // pyCode.style.height = "0";
-        // jsCode.style.height = "100%";
     }
-
 })
-
-
-
-
-
-
-
-
-
-
