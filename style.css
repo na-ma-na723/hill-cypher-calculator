@@ -1,0 +1,426 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* user-select: none; */
+    /* color: white; */
+}
+
+::selection{
+    color: black;
+    background-color: yellow;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #131417;
+    color: white;
+}
+
+.main{
+    width: 55%;
+    border: 2px solid #AED2B8;
+    /* border-top: 0;
+    border-bottom: 0; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 100px;
+    row-gap: 25px;
+}
+
+#header > h1{
+    /* font-family: 'Times New Roman', Times, serif; */
+    --font-sofia: sofia-pro, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline;
+    position: relative;
+}
+
+#info{
+    /* font-size: 100%; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.2rem;
+    row-gap: 15px;
+
+    line-height: 1.5;
+}
+
+#info .infoText{
+    font-family: "urw-din",sans-serif;
+}
+
+#info li{
+    margin: 0 0 0 20px;
+    line-height: 1.58;
+    font-family: "urw-din",sans-serif;
+}
+
+#calc{
+    padding-bottom: 10px;
+}
+
+#calculator{
+    /* border: 2px solid rgb(208, 255, 0); */
+    padding: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2A2A2C;
+    border-radius: 5px;
+}
+
+
+textarea{
+    color: white;
+    font-family: Georgia, serif;
+    background-color: #18181a;
+    text-align: center;
+}
+
+#keyBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs{
+    width: 93%;
+    height: 40px;
+    resize: none;
+    font-size: 25px;
+    border: 2px solid greenyellow;
+    margin-bottom: 5px;
+}
+
+#inOutBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.encryptBox{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    padding: 10px 10px 0 10px;
+    width:45%;
+}
+.outputText{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    max-height: 300px;
+    /* margin: 10px; */
+    /* resize: none; */
+    position: relative;
+
+    font-size: 25px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+#encryptButton,
+#decryptButton{
+    /* width: 100%; */
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+#example{
+    /* border: 2px solid rgb(208, 255, 0); */
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+#example h2{
+    padding-bottom: 10px;
+}
+
+#example p{
+    background-color: #2A2A2C;
+    border-radius: 5px;
+    padding: 15px;
+    /* letter-spacing: 2px; */
+    line-height: 1.5;
+    font-family: Consolas,monospace;
+}
+
+#method{
+    /* border: 2px solid rgb(184, 135, 230); */
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+
+#method h3{
+    font-family: "urw-din",sans-serif;
+}
+
+#method #map{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid rgb(184, 135, 230); */
+    padding: 10px;
+    width: fit-content;
+    background-color: #2A2A2C;
+    margin: 20px 0 20px;
+    border-radius: 5px;
+}
+
+#method .mapg{
+    display: flex;
+    flex-direction: row;
+}
+
+#method .mapSet{
+    padding: 20px 25px;
+    font-size: 20px;
+    font-family: Consolas,monospace;
+    /* border: 2px solid rgb(184, 135, 230); */
+}
+
+#method #formulae{
+    /* border: 2px solid rgb(208, 255, 0); */
+    display: flex;
+    flex-direction: column;
+    font-family: Consolas,monospace;
+}
+
+#method p{
+    font-size: 20px;
+}
+
+#codeBox{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#codeBox #languageButton .langbtn{
+    padding: 5px;
+    /* background-color: #131417; */
+    font-size: 20px;
+    font-family: Consolas,monospace;
+    border-radius: 5px 5px 0 0;
+}
+
+#languageButton{
+    display: flex;
+    gap: 0;
+}
+
+#languageButton #buttonFill{
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.copy{
+    background-color: #131417;
+    border: 0;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    color: yellow;
+}
+
+.copied{
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white !important;
+}
+
+.copy:hover{
+    text-shadow: 0 0 10px yellow;
+    cursor: pointer;
+}
+
+
+/* #languageButton #cppButton{
+    border: 2px solid white;
+    background-color: #272822;
+    border-bottom: 0;
+}
+
+#languageButton #pyButton{
+    border: 0;
+    background-color: #131417;
+    border-bottom: 2px solid white;
+    color: yellow;
+}
+
+#languageButton #jsButton{
+    border: 0;
+    background-color: #131417;
+    border-bottom: 2px solid white;
+    color: yellow;
+} */
+
+#code{
+    background-color: #272822;
+    padding: 25px 15px 15px 40px;
+    border: 2px solid white;
+    border-top: 0;
+}
+
+#code pre{
+    padding: 10px;
+    background-color: #30312a;
+    border-radius: 5px;
+    overflow-x: overlay;
+    max-width: 90vw;
+}
+
+#code #cpp{
+    opacity: 1 ;
+}
+
+#code #python{
+    opacity: 0 ;
+}
+
+#code #javascript{
+    opacity: 0 ;
+}
+
+.selected{
+    background-color: #272822;
+    border: 2px solid white;
+    border-bottom: 0;
+    color: white;
+}
+
+.notSelected{
+    background-color: #131417;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: yellow;
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    body{
+        padding: 50px;
+    }
+    .main{
+        width: 100%;
+    }
+    #calculator{
+        /* border: 2px solid rgb(208, 255, 0); */
+        padding: 20px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    #inOutBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    #keyBox{
+        width: 80%;
+    }
+    #key{
+        width: 100%
+    }
+
+    #inputBox,
+    #outputBox{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid white; */
+        /* padding: 2px; */
+        width:80%;
+    }
+
+    #encryptButton,
+    #decryptButton{
+        width: 100%;
+        /* height: 30px; */
+    }
+
+
+    #method #map{
+        display: flex;
+        /* flex-direction: column; */
+        /* border: 2px solid rgb(184, 135, 230); */
+    }
+
+    #method .mapg{
+        display: block;
+        padding: 25px 0;
+        /* flex-direction: column; */
+    }
+
+
+    #method .mapSet{
+        padding: 0 20px ;
+    }
+
+    #code pre{
+        padding: 5px;
+    }
+
+    #code{
+        padding: 20px 15px 15px 25px;
+    }
+}
+
+@media (max-width: 350px) {
+    #languageButton{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #codeBox #languageButton .langbtn{
+        border-radius: 5px;
+    }
+
+    .selected{
+        background-color: yellow;
+        border: 2px solid white;
+        border-radius: 5px;
+        color: black;
+    }
+    
+    .notSelected{
+        background-color: #131417;
+        border: 0;
+        color: yellow;
+    }
+
+
+}

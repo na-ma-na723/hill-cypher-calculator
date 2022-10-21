@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cypher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="icon" href="./assests/hacker.png"> -->
+    <script src="./util.js" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="main">
+
+        <div id="header">
+            <h1>HILL CYPHER</h1>
+        </div>
+
+        <div id="info">
+            <p class="infoText">
+                Hill cipher is a polygraphic substitution cipher based on linear algebra.
+                Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, 
+                but this is not an essential feature of the cipher. To encrypt a message, each block of n letters (considered as an n-component vector) 
+                is multiplied by an invertible n × n matrix, against modulus 26.
+            </p>
+            <div id="bullets" class="infoText">
+                <ul>
+                    <li>
+                        To decrypt the message, each block is multiplied by the inverse of the matrix used for encryption.
+                    </li>
+                    <li>
+                        The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+
+        <h2 id="calc">Calculator : </h2>
+        <div id="calculator">
+            <div id="keyBox">
+                <textarea name="key" id="key" class="inputs" placeholder="key"></textarea>
+                <textarea name="input" id="inputText" class="inputs" placeholder="ORIGINAL MESSAGE"></textarea>
+            </div>
+            <div id="inOutBox">
+                <div id="inputBox" class="encryptBox">
+                    <button name="encrypt button" id="encryptButton" class="btn">ENCRYPT ONE</button>
+                    <!-- <textarea name="input" id="inputText1" placeholder="ORIGINAL MESSAGE 1"></textarea> -->
+                    <textarea name="input" id="outputText1" class="outputText" placeholder="CYPHER TEXT 1"></textarea>
+                </div>
+                
+                <div id="outputBox" class="encryptBox">
+                    <button name="decrypt button" id="decryptButton" class="btn">ENCRYPT TWO</button>
+                    <!-- <textarea name="output" id="inputText2" placeholder="ORIGINAL MESSAGE 2"></textarea> -->
+                    <textarea name="input" id="outputText2" class="outputText" placeholder="CYPHER TEXT 2"></textarea>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div id="example">
+            <h2>Example :</h2>
+            <p>
+                Input :-
+                <br>
+                Plaintext :   NAMANBHANDARI<br>
+                Keyword :  HELLO<br>
+                Output :- <br>
+                Ciphertext :  UEXLBILLYRHVT<br>
+                For generating key, the given keyword is repeated
+                in a circular manner until it matches the length of 
+                the plain text.<br>
+                The keyword "HELLO" generates the key "HELLOHELLOHEL"
+                The plain text is then encrypted using the process 
+                explained below.
+            </p>
+        </div>
+
+        <div id="method">
+            <h3>
+                Visualize Vigenère algebraically by converting [A-Z] into numbers [0–25]. <br>
+                Mathematically give each letter a number : <br>
+            </h3> 
+            <div id="map">
+                
+                
+                <div class="mapg" id="mapg1">
+                <div id="map1" class="mapSet">
+                    a - 0<br>
+                    b - 1<br>
+                    c - 2<br>
+                    d - 3<br>
+                    e - 4<br>
+                    f - 5<br>
+                    g - 6<br>
+                </div>
+                <div id="map2" class="mapSet">
+                    h - 7<br>
+                    i - 8<br>
+                    j - 9<br>
+                    k - 10<br>
+                    l - 11<br>
+                    m - 12<br>
+                    n - 13<br>
+                </div>
+                </div>
+
+
+                <div class="mapg" id="mapg2">
+                <div id="map3" class="mapSet">
+                    o - 14<br>
+                    p - 15<br>
+                    q - 16<br>
+                    r - 17<br>
+                    s - 18<br>
+                    t - 19<br>
+                    u - 20<br>
+                </div>
+                <div id="map4" class="mapSet">
+                    v - 21<br>
+                    w - 22<br>
+                    x - 23<br>
+                    y - 24<br>
+                    z - 25<br>
+                </div>
+
+                </div>
+            </div>
+            <div id="formulae">
+                <h3>
+                    Encryption : E<sub>i</sub> = (P<sub>i</sub> + K<sub>i</sub>) % 26 <br>
+                    Decryption : D<sub>i</sub> = (E<sub>i</sub> - K<sub>i</sub> + 26) % 26
+                </h3>
+                <p>
+                    where <br>
+                    P<sub>i</sub> is character of plain text at index i.<br>
+                    K<sub>i</sub> is character of key at index i.<br>
+                    E<sub>i</sub> is character of encrypted(cypher) text at index i.<br>
+                    D<sub>i</sub> is character of decrypted text at index i.<br>
+                </p>
+            </div>
+        </div>
+
+        <div id="codeBox">
+            <div id="languageButton">
+                <button id="cppButton" class="langbtn selected" value="selected" >CPP</button>
+                <button id="pyButton" class="langbtn notSelected" value="notselected" >PYTHON</button>
+                <button id="jsButton" class="langbtn notSelected" value="notselected" >JAVASCRIPT</button>
+                <div id="buttonFill">
+                    <button id="copyButton" class="copy"> <i class="fa fa-clone" ></i> </button>
+                </div>
+            </div>
+
+            <div id="code">
+                
+                <div id="active">
+                    <pre id="activeCode">
+
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- a - 0       h - 7       o - 14       v - 21
+b - 1       i - 8       p - 15       w - 22
+c - 2       j - 9       q - 16       x - 23
+d - 3       k - 10      r - 17       y - 24
+e - 4       l - 11      s - 18       z - 25
+f - 5       m - 12      t - 19
+g - 6       n - 13      u - 20 -->
+<!-- style="background-color: #272822; -->
