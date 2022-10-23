@@ -342,7 +342,7 @@ textarea{
     #keyBox{
         width: 80%;
     }
-    #key{
+    .inputs{
         width: 100%
     }
 
