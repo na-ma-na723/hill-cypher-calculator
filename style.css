@@ -51,7 +51,6 @@ body{
     position: relative;
     font-size: 1.2rem;
     row-gap: 15px;
-
     line-height: 1.5;
 }
 
@@ -171,28 +170,25 @@ textarea{
     font-family: "urw-din",sans-serif;
 }
 
-#method #map{
-    display: flex;
-    flex-direction: row;
-    /* border: 2px solid rgb(184, 135, 230); */
-    padding: 10px;
-    width: fit-content;
-    background-color: #2A2A2C;
-    margin: 20px 0 20px;
-    border-radius: 5px;
+.exampleImage{
+    padding: 20px;
 }
 
-#method .mapg{
-    display: flex;
-    flex-direction: row;
+#matrix1{
+    width: 250px;
+}
+#matrix2{
+    width: 100px;
+}
+#matrix3{
+    width: 250px;
+    height: auto;
+}
+#matrix4,  #matrix5{
+    width: 90%;
 }
 
-#method .mapSet{
-    padding: 20px 25px;
-    font-size: 20px;
-    font-family: Consolas,monospace;
-    /* border: 2px solid rgb(184, 135, 230); */
-}
+
 
 #method #formulae{
     /* border: 2px solid rgb(208, 255, 0); */

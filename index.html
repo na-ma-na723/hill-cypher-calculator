@@ -67,82 +67,43 @@
             <p>
                 Input :-
                 <br>
-                Plaintext :   NAMANBHANDARI<br>
-                Keyword :  HELLO<br>
+                Plaintext : ACT<br>
+                Keyword : GYBNQKURP<br>
                 Output :- <br>
-                Ciphertext :  UEXLBILLYRHVT<br>
-                For generating key, the given keyword is repeated
-                in a circular manner until it matches the length of 
-                the plain text.<br>
-                The keyword "HELLO" generates the key "HELLOHELLOHEL"
+                Ciphertext :  POH / QRT<br>
+                Hill Cypher can have two different cypher text or encrypts, 
+                it depends on how we write the message matrix (vertically or horizontally).<br>
+                <!-- The keyword "HELLO" generates the key "HELLOHELLOHEL"
                 The plain text is then encrypted using the process 
-                explained below.
+                explained below. -->
             </p>
         </div>
 
         <div id="method">
+            <h3>Encryption : </h3>
             <h3>
-                Visualize Vigenère algebraically by converting [A-Z] into numbers [0–25]. <br>
-                Mathematically give each letter a number : <br>
+                We have to encrypt the message ‘ACT’ (n=3).
+                The key is ‘GYBNQKURP’ which can be written as the nxn matrix: <br>
             </h3> 
-            <div id="map">
-                
-                
-                <div class="mapg" id="mapg1">
-                <div id="map1" class="mapSet">
-                    a - 0<br>
-                    b - 1<br>
-                    c - 2<br>
-                    d - 3<br>
-                    e - 4<br>
-                    f - 5<br>
-                    g - 6<br>
-                </div>
-                <div id="map2" class="mapSet">
-                    h - 7<br>
-                    i - 8<br>
-                    j - 9<br>
-                    k - 10<br>
-                    l - 11<br>
-                    m - 12<br>
-                    n - 13<br>
-                </div>
-                </div>
+            <img src="./assets/matrix1.png" alt="matrix1" class="exampleImage" id="matrix1">
+            <h3>The message ACT is written in following ways : </h3>
 
-
-                <div class="mapg" id="mapg2">
-                <div id="map3" class="mapSet">
-                    o - 14<br>
-                    p - 15<br>
-                    q - 16<br>
-                    r - 17<br>
-                    s - 18<br>
-                    t - 19<br>
-                    u - 20<br>
-                </div>
-                <div id="map4" class="mapSet">
-                    v - 21<br>
-                    w - 22<br>
-                    x - 23<br>
-                    y - 24<br>
-                    z - 25<br>
-                </div>
-
-                </div>
+            <div>
+                <img src="./assets/matrix2.png" alt="matrix2" class="exampleImage" id="matrix2">
+                <img src="./assets/matrix3.png" alt="matrix3" class="exampleImage" id="matrix3">
             </div>
-            <div id="formulae">
-                <h3>
-                    Encryption : E<sub>i</sub> = (P<sub>i</sub> + K<sub>i</sub>) % 26 <br>
-                    Decryption : D<sub>i</sub> = (E<sub>i</sub> - K<sub>i</sub> + 26) % 26
-                </h3>
-                <p>
-                    where <br>
-                    P<sub>i</sub> is character of plain text at index i.<br>
-                    K<sub>i</sub> is character of key at index i.<br>
-                    E<sub>i</sub> is character of encrypted(cypher) text at index i.<br>
-                    D<sub>i</sub> is character of decrypted text at index i.<br>
-                </p>
+
+            <h3>The enciphered vector is given as: </h3>
+            <div>
+                <img src="./assets/matrix4.png" alt="matrix4" class="exampleImage" id="matrix4">
+                <img src="./assets/matrix5.png" alt="matrix1" class="exampleImage" id="matrix5">
             </div>
+
+
+
+
+<!-- 406    355    305 -->
+
         </div>
 
         <div id="codeBox">
