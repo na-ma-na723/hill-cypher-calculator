@@ -188,6 +188,10 @@ textarea{
     width: 90%;
 }
 
+#matrix6{
+    width: 500px;
+}
+
 
 
 #method #formulae{
@@ -336,7 +340,6 @@ textarea{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         width: 100%;
     }
     #keyBox{
@@ -350,8 +353,6 @@ textarea{
     #outputBox{
         display: flex;
         flex-direction: column;
-        /* border: 2px solid white; */
-        /* padding: 2px; */
         width:80%;
     }
 
