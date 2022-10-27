@@ -342,26 +342,19 @@ textarea{
         align-items: center;
         width: 100%;
     }
+
+    .outputText{
+        font-size: 20px;
+    }
+
+
     #keyBox{
         width: 80%;
     }
     .inputs{
-        width: 100%
-    }
-
-    #inputBox,
-    #outputBox{
-        display: flex;
-        flex-direction: column;
-        width:80%;
-    }
-
-    #encryptButton,
-    #decryptButton{
         width: 100%;
-        /* height: 30px; */
+        font-size: 20px;
     }
-
 
     #method #map{
         display: flex;
