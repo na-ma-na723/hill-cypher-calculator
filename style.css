@@ -189,7 +189,7 @@ textarea{
 }
 
 #matrix6{
-    width: 500px;
+    width: 45%;
 }
 
 
@@ -341,12 +341,16 @@ textarea{
         justify-content: center;
         align-items: center;
         width: 100%;
+        flex-direction: column;
     }
 
     .outputText{
         font-size: 20px;
     }
 
+    .encryptBox{
+        width: 80%;
+    }
 
     #keyBox{
         width: 80%;
@@ -356,23 +360,7 @@ textarea{
         font-size: 20px;
     }
 
-    #method #map{
-        display: flex;
-        /* flex-direction: column; */
-        /* border: 2px solid rgb(184, 135, 230); */
-    }
-
-    #method .mapg{
-        display: block;
-        padding: 25px 0;
-        /* flex-direction: column; */
-    }
-
-
-    #method .mapSet{
-        padding: 0 20px ;
-    }
-
+    
     #code pre{
         padding: 5px;
     }
